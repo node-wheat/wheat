@@ -19,5 +19,10 @@
   "bugs": {
     "url": "https://github.com/node-wheat/wheat/issues"
   },
-  "homepage": "https://github.com/node-wheat/wheat#readme"
+  "homepage": "https://github.com/node-wheat/wheat#readme",
+  "dependencies": {
+    "koa": "^2.7.0",
+    "vue": "^2.6.10",
+    "webpack": "^4.35.3"
+  }
 }
