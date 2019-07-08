@@ -1,0 +1,23 @@
+{
+  "name": "wheat",
+  "version": "1.0.0",
+  "description": "node build tools",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/node-wheat/wheat.git"
+  },
+  "keywords": [
+    "node",
+    "wheat"
+  ],
+  "author": "wheat",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/node-wheat/wheat/issues"
+  },
+  "homepage": "https://github.com/node-wheat/wheat#readme"
+}
