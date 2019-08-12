@@ -4,7 +4,8 @@
   "description": "node build tools",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "node ./webpack.config.js"
   },
   "repository": {
     "type": "git",
@@ -21,8 +22,24 @@
   },
   "homepage": "https://github.com/node-wheat/wheat#readme",
   "dependencies": {
+    "@babel/core": "^7.5.5",
+    "element-ui": "^2.10.1",
     "koa": "^2.7.0",
+    "koa-bodyparser": "^4.2.1",
+    "koa-ejs": "^4.2.0",
+    "koa-router": "^7.4.0",
     "vue": "^2.6.10",
     "webpack": "^4.35.3"
+  },
+  "devDependencies": {
+    "@vue/babel-preset-app": "^3.10.0",
+    "babel-core": "^7.0.0-bridge.0",
+    "babel-loader": "^7",
+    "express": "^4.17.1",
+    "html-webpack-plugin": "^3.2.0",
+    "vue-loader": "^15.7.1",
+    "vue-template-compiler": "2.6.10",
+    "webpack-cli": "^3.3.5",
+    "webpack-dev-middleware": "^3.7.0"
   }
 }
