@@ -33,6 +33,14 @@ const config = {
         test: /\.vue$/,
         include: path.resolve(__dirname, 'web'),
         loader: 'vue-loader'
+      },
+      {
+        test: /\.css$/,
+        loader: ['style-loader', 'css-loader']
+      },
+      {
+        test: /(\.ttf)|(\.woff)$/,
+        loader: 'file-loader'
       }
     ]
   }

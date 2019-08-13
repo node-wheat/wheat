@@ -8,8 +8,8 @@ var Router = require('koa-router')
 var router = new Router();
 var routes = require('./routes/web');
 var proxy = require('koa-proxy');
+
 const viewDir = path.resolve(__dirname, '../web/view');
-console.log(123, app)
 // app.use(async (ctx, next) => {
 //   await next();
 //   const rt = ctx.response.get('X-Response-Time');
