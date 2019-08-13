@@ -7,27 +7,33 @@ const ejs = require('koa-ejs');
 var Router = require('koa-router')
 var router = new Router();
 var routes = require('./routes/web');
+var proxy = require('koa-proxy');
 const viewDir = path.resolve(__dirname, '../web/view');
+console.log(123, app)
 // app.use(async (ctx, next) => {
 //   await next();
 //   const rt = ctx.response.get('X-Response-Time');
 //   console.log(`${ctx.method} ${ctx.url} - ${rt}`);
 // });
+app.use(proxy({
+  host:  'http://localhost:3001',
+  match: /^\/home\//
+}));
 ejs(app, {
   root: viewDir,
   viewExt: 'html',
   cache: false,
-  debug: true,
+  debug: false,
+  layout: null
   // locals: locals
 });
 
 app.use(bodyParser());
-// app.use(middlewares.etag());
-// routes(router);
-router.get('/package', function (ctx) {
-  ctx.body = 'hello world'
-  // return this.render('index');
-});
+routes(router, app);
+// router.get('/package', function (ctx) {
+//   ctx.body = 'hello world'
+//   // return this.render('index');
+// });
 app.use(router.routes(app))
   .use(router.allowedMethods());
 

@@ -2,14 +2,10 @@
 
 var showPackage = require('../controllers/show');
 
-function routes(app) {
+function routes(router, app) {
   // scope package without version
-  app.get('/package', function (ctx) {
-    console.log(123, this.render);
-    ctx.body = 'hello world'
-    return 'helloworld'
+  router.get('/package', showPackage);
     // return this.render('index');
-  });
 }
 
 module.exports = routes;
