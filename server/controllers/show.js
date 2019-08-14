@@ -1,5 +1,6 @@
-module.exports = async function show(ctx, next) {
-  return await ctx.render('index', {
-    title: 'hello world - '
+module.exports = async function show(ctx) {
+  const a = await ctx.render('index', {
+    title: 'hello world - ',
   });
-}
+  return a;
+};

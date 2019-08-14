@@ -1,5 +1,5 @@
 # WHEAT
-为微前端架构管理前端项目
+微微前端架构管理前端项目
 ## get start
 ```bash
 # clone from git

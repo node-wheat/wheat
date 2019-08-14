@@ -1,13 +1,15 @@
 const Koa = require('koa');
+
 const app = new Koa();
 const http = require('http');
 const path = require('path');
 const bodyParser = require('koa-bodyparser');
 const ejs = require('koa-ejs');
-var Router = require('koa-router')
-var router = new Router();
-var routes = require('./routes/web');
-var proxy = require('koa-proxy');
+const Router = require('koa-router');
+
+const router = new Router();
+const proxy = require('koa-proxy');
+const routes = require('./routes/web');
 
 const viewDir = path.resolve(__dirname, '../web/view');
 // app.use(async (ctx, next) => {
@@ -15,16 +17,17 @@ const viewDir = path.resolve(__dirname, '../web/view');
 //   const rt = ctx.response.get('X-Response-Time');
 //   console.log(`${ctx.method} ${ctx.url} - ${rt}`);
 // });
+
 app.use(proxy({
-  host:  'http://localhost:3001',
-  match: /^\/home\//
+  host: 'http://localhost:3001',
+  match: /^\/home\//,
 }));
 ejs(app, {
   root: viewDir,
   viewExt: 'html',
   cache: false,
   debug: false,
-  layout: null
+  layout: null,
   // locals: locals
 });
 
