@@ -26,7 +26,7 @@
   "homepage": "https://github.com/node-wheat/wheat#readme",
   "dependencies": {
     "@babel/core": "^7.5.5",
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "element-ui": "^2.10.1",
     "file-loader": "^4.2.0",
     "koa": "^2.7.0",
